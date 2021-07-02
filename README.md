@@ -82,6 +82,11 @@ Pyhton per avviare un server locale
    ```sh
    $ pip install -r requirements.txt
    ```
+NEL CASO IN CUI CI SIA L'ERRORE: AttributeError: module 'keras.utils.generic_utils' has no attribute 'populate_dict_with_module_objects'
+MODIFICARE IL FILE __ init __ .py PRESENTE NELLA CARTELLA: venv/Lib/keras/initializers E MODIFICARE LE RIGHE 24,25 CON:
+from tensorflow.python.keras.utils import generic_utils
+from tensorflow.python.keras.utils import tf_inspect as inspect
+
 Eseguire prima il file train.py per addestrare il modello. Questo genererà un file chiamato chatbot_model.h5.
 Dopo aver eseguito train.py, esegui app.py per inizializzare e avviare il bot.
 <!-- USAGE EXAMPLES -->
