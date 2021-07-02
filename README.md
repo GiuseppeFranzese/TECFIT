@@ -69,7 +69,8 @@ Questo progetto è stato realizzato utilizzando vari linguaggi di programmazione
 
 ### Prerequisites
 
-Browser Web per mostrare l'applicazione web
+Browser Web
+
 Pyhton per avviare un server locale
 
 ### Installation
