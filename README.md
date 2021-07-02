@@ -98,7 +98,7 @@ _For more examples, please refer to the [Documentation](https://example.com
 
 <!-- LICENSE -->
 ## License
-Apache license
+Apache license 2.0
 
 
 <!-- AUTHORS -->
