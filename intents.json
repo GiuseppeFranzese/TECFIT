@@ -1,0 +1,87 @@
+{
+    "intents": [{
+            "tag": "greetings",
+            "patterns": ["ciao","we","buongiorno","buonasera","buon pomeriggio"],
+            "responses": ["Ciao! Su cosa vuoi ricevere assistenza?", "Buongiorno, benvenuto nella chat. Su cosa vuoi ricevere assistenza?"],
+            "context": [""]
+        },
+        {
+            "tag": "english",
+            "patterns": [ "hello","hi","good morning","good afternoon","good evening"],
+            "responses": ["\nHello! What do you want to receive assistance on?", "Hello, welcome to the chat. What do you want to receive assistance on?"],
+            "context": [""]
+        },
+        {
+            "tag": "alimentazione",
+            "patterns": ["alimentazione"],
+            "responses": ["Ok! Chiedi pure!"],
+            "context": [""]
+        },
+        {
+            "tag": "alimentazione-english",
+            "patterns": ["alimentation"],
+            "responses": ["Ok! Please ask!"],
+            "context": [""]
+        },
+        {
+            "tag": "richiestaalimentazione",
+            "patterns": ["cosa posso mangiare prima di un allenamento?", "pre-allenamento"],
+            "responses": ["Prima di un allenamento potresti mangiare un frutto come ad esempio una banana, arancia o mela, oppure potresti bere un frullato di proteine in polvere con latte, banana e frutti di bosco."],
+            "context": [""]
+        },
+        {
+            "tag": "richiestaalimentazione-english",
+            "patterns": ["what can I eat before a workout?", "before workout"],
+            "responses": ["Before a workout, you could eat a fruit such as a banana, orange or apple, or you could drink a protein powder shake with milk, banana and berries."],
+            "context": [""]
+        },
+        {
+            "tag": "richiestaalimentazione1",
+            "patterns": ["cosa posso mangiare dopo un allenamento?", "post-allenamento"],
+            "responses": ["Dopo un allenamento potresti bere succhi di frutta, o mangiare gallette di riso, fette biscottate, patate lesse, banana matura, riso bianco bollito ecc. Non e' da escludere un secondo spuntino post allenamento a base proteica e lipidica, da assumere dopo circa 1-2 ore di distanza; e' il caso di: yogurt (normali, addensati, magri, interi ecc), tonno, albume d'uovo cotto, affettati magri (possibilmente poco salati), roast-beef e pochi semi oleosi (mandorle, noci, nocciole, pistacchi, pinoli ecc.)."],
+            "context": [""]
+        },
+                {
+            "tag": "richiestaalimentazione1-english",
+            "patterns": ["what can I eat after a workout?", "after workout"],
+            "responses": ["After a workout, you could drink fruit juices, or eat rice cakes, rusks, boiled potatoes, ripe bananas, boiled white rice, etc. A second protein and lipid-based post-workout snack cannot be excluded, to be taken after about 1-2 hours apart; this is the case of: yogurt (normal, thickened, lean, whole, etc.), tuna, cooked egg white, lean cold cuts (possibly slightly salty), roast beef and a few oil seeds (almonds, walnuts, hazelnuts, pistachios, pine nuts etc.)."],
+            "context": [""]
+        },
+        {
+            "tag": "esecuzione",
+            "patterns": ["esecuzione"],
+            "responses": ["Ok! Chiedi pure!"],
+            "context": [""]
+        },
+                {
+            "tag": "esecuzione-english",
+            "patterns": ["execution"],
+            "responses": ["Ok! Please ask!"],
+            "context": [""]
+        },
+        {
+            "tag": "richiestaesecuzione",
+            "patterns": ["come posso eseguire in modo corretto le croci?", "croci"],
+            "responses": ["La posizione di partenza vede l'atleta sdraiato supino su una panca piana con glutei, parte alta della schiena, scapole e nuca sempre a contatto con essa e con i piedi appoggiati saldamente al terreno verticalmente sotto, o dietro le ginocchia, ma mai davanti. L'esecuzione consiste nel flettere le spalle in modo che ciascun manubrio tracci un arco di cerchio sul piano trasversale su cui giaceva in partenza. Il movimento termina poco prima che i manubri si trovino in posizione perpendicolare al terreno."],
+            "context": [""]
+        },
+        {
+            "tag": "richiestaesecuzione-english",
+            "patterns": ["how can I make the chest crosses correctly?", "chest crosses"],
+            "responses": ["The starting position sees the athlete lying on his back on a flat bench with the buttocks, upper back, shoulder blades and nape always in contact with it and with the feet firmly resting on the ground vertically below, or behind the knees, but never in front. The execution consists of flexing the shoulders so that each dumbbell traces an arc of a circle on the transverse plane on which it lay at the start. The movement ends just before the dumbbells are perpendicular to the ground."],
+            "context": [""]
+        },
+        {
+            "tag": "richiestaesecuzione1",
+            "patterns": ["come posso eseguire in modo corretto i pull-up?","pull-up"],
+            "responses": ["La posizione di partenza vede l’atleta appeso alla sbarra, con la presa che preferisce. Da questa posizione, con le braccia completamente distese, si cerca di portare il petto in alto fino a sfiorare la sbarra. La fase di discesa avviene in modo lento e controllato."],
+            "context": [""]
+        },
+        {
+            "tag": "richiestaesecuzione1-english",
+            "patterns": ["how can I make pull-up correctly?","pull-up"],
+            "responses": ["The starting position sees the athlete hanging from the bar, with the grip he prefers. From this position, with the arms fully extended, one tries to bring the chest up until it touches the bar. The descent phase takes place in a slow and controlled way."],
+            "context": [""]
+        }
+    ]
+}

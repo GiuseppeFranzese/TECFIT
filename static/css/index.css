@@ -1,0 +1,54 @@
+.tec-contenitore{
+
+    justify-content: center;
+    align-items: center;
+    align-text: center;
+    font-family: Montserrat;
+
+    font-size: 1.2rem;
+    height:7rem;
+    font-weight: bold;
+
+
+}
+.tec-bottone{
+    display:inline-block;
+    background-color: #014b55;
+    border-radius: 2rem;
+    color: #002f36;
+    height: 60px;
+    line-height: 50px;
+    padding: 10px 30px;
+
+    box-shadow: 0px 15px 10px -10px;
+    rgba(0,0,0,0.4);
+    transition: all 1.5s;
+}
+.button, .button:hover{
+    color:#fff;
+}
+.tec-wrapper:hover .tec-bottone{
+    box-shadow: 0px 45px 20px -30px;
+    rgba(0,0,0,0.2);
+    transform: translateY(-20px);
+}
+
+.badge{background-color:#000;color:#fff;display:inline-block;
+    padding-left:8px;padding-right:8px;text-align:center}
+.badge{border-radius:50%}
+.tec-displayContainer{position:relative}
+.tec-content{margin-left:auto;margin-right:auto}
+.tec-content{max-width:980px}
+.tec-displayBottommiddle{position:absolute;left:50%;bottom:0;transform:translate(-50%,0%);
+    -ms-transform:translate(-50%,0%)}
+.container{padding:0.01em 16px}
+.tec-large{font-size:38px!important}
+.tec-center{text-align:center!important}
+.border{border:1px solid #ccc!important}
+.tec-section{margin-top:6px!important;margin-bottom:176px!important}
+.tec-left{float:left!important}
+.tec-right{float:right!important}
+.tec-transparent{background-color:transparent!important}
+.white,.tec-hoverWhite:hover{color:#000!important;background-color:#fff!important}
+.tec-hoverTextKhaki:hover{color: #014b55 !important}
+.text-white,.hover-text-white:hover{color:#fff!important}

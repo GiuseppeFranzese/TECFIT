@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>TecFit - Choose your plan</title>
+
+    <link rel="icon" type="image/x-icon" href="../static/img/Icona.ico"/>
+    <!--ICON-->
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+
+    <link href="../static/css/styles.css" rel="stylesheet" />
+    <link href="../static/css/Sceglipiano.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../static/css/Chat.css">
+
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand" href="/">TECFIT</a>
+        <button class="navbar-toggler  text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/ScegliPiano/">CHOOSE YOUR PLAN</a></li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/Esecuzione/">EXECUTION</a></li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/Alimentazione/">ALIMENTATION</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="tec-masthead bg-primary  ">
+    <div class="centro container d-flex align-items-center flex-column">
+        <div class="tec-pageSection">
+            <div class="container" id="formScegli">
+
+                <h2 class="tec-pageSectionHeading text-center text-uppercase text-secondary mb-0" style="padding-top: 0">Choose your plan</h2>
+
+                <div class="tec-dividerCustom">
+                    <div class="tec-dividerCustomLine"></div>
+                </div>
+
+                <div class="tec-contiene">
+                    <div class="tec-headerform text-center">
+                        <h2>Enter data</h2>
+                    </div>
+                    <form id="tec-formscegli" class="tec-formscegli">
+                        <div class="tec-formControlScegli">
+                            <label for="Nome">Name *</label>
+                            <input type="text" placeholder="Es. Mario" id="Nome" maxlength="15"/>
+                            <small>Error message</small>
+                        </div>
+                        <div class="tec-formControlScegli">
+                            <label for="Cognome">Surname *</label>
+                            <input type="text" placeholder="Es. Rossi" id="Cognome" maxlength="15"/>
+                            <small>Error message</small>
+                        </div>
+                        <div class="tec-formControlScegli">
+                            <label for="Eta">Age *</label>
+                            <input type="text" placeholder="Es. 21" id="Eta" maxlength="3"/>
+                            <small>Error message</small>
+                        </div>
+                        <div class="tec-formControlScegli">
+                            <label for="Peso">Weight (KG) *</label>
+                            <input type="text" placeholder="Es. 80" id="Peso" maxlength="3"/>
+                            <small> Error message <br></small>
+                        </div>
+
+                        <label for="Eta">Gender</label>
+                        <div class="tec-inputGroup">
+                            <input id="radio1" name="radio" type="radio" checked/>
+                            <label for="radio1">Male</label>
+                        </div>
+                        <div class="tec-inputGroup">
+                            <input id="radio2" name="radio" type="radio"/>
+                            <label for="radio2">Female</label>
+
+                        </div>
+                        <div class="tec-contenitore" align="center">
+                            <div class="tec-wrapper">
+
+                                <!-- <button id="send">Invia</button> -->
+                                <input id="send" type="button" value="SEND" onclick="checkInputs()">
+                                <button id="tec-buttonDownload" onclick="loadDoc()" style="display: none">Download PDF</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </section>
+    </div>
+</header>
+
+<!--<button class="open-button" id="button-chat" onclick="openForm()">Chat</button> -->
+<button class="chat_icon fa fa-comments" id="button-chat" onclick="openForm()"></button>
+<div class="chat-popup" id="myForm">
+    <div class="row">
+        <div class="col-md-10 mr-auto ml-auto">
+            <form class="form-container">
+                <div id="userInput" class="row">
+                    <div class="col-md-10">
+                        <h1>Chat</h1>
+                        <textarea disabled id="textArea" name="msg" placeholder="Message" class="form-control"></textarea>
+                        <input id="text" type="text" name="msg" placeholder="Type a message.." class="form-control">
+                        <div style="float:left">
+                            <button  type="submit" class="btn-chat btn btn-warning">Send</button> </div>
+                        <div style="float:left">
+                            <button type="button" class="btn-chat cancel" onclick="closeForm()">Close</button> </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script src="../static/js/scripts.js"></script>
+<script src="../static/js/Sceglipiano.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #12adb4;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.tec-wrapperSearch{
+width: 100%;
+}
+
+.tec-wrapperSearch .tec-searchInput{
+    margin-top: 1rem;
+    margin-left:30%;
+    margin-right:30%;
+    position: relative;
+    background: #ffffff;
+    max-width: 450px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+}
+
+.tec-searchInput input{
+    height: 55px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 0 60px 0 20px;
+    font-size: 18px;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+}
+
+.tec-searchInput .tec-icon{
+    height: 55px;
+    width: 55px;
+    line-height: 55px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    font-size: 20px;
+    color: #014b55;
+    cursor: pointer;
+}
+
+.tec-searchInput .tec-autocomBox{
+    padding: 0px;
+    max-height: 280px;
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.tec-searchInput.active .tec-autocomBox{
+    padding: 10px 8px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.tec-autocomBox li{
+    list-style: none;
+    padding: 8px 12px;
+    width: 100%;
+    cursor: default;
+    border-radius: 3px;
+    display: none;
+}
+
+.tec-searchInput.active .tec-autocomBox li{
+    display: block;
+}
+
+.tec-autocomBox li:hover{
+    background: #efefef;
+}
+.tec-wrapperSearch .info{
+    color: #2c3e50;
+    font-family: inherit;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.title{
+    margin-top: 1rem;
+    color: #2c3e50;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+.img-esercizi {
+    width:40%;
+    height:25%;
+    border-radius: 3rem;
+}
+
+
