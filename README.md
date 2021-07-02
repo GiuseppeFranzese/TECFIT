@@ -75,14 +75,12 @@ Pyhton per avviare un server locale
 
 ### Installation
 
-1. Clone the repo
-   ```sh
-   git clone https://github.com/GiuseppeFranzese/TECFIT
-   ```
-2. Installa le librerie
-   ```sh
-   $ pip install -r requirements.txt
-   ```
+1. Create a virtual environment(venv) by terminal: **> py -m venv venv**
+2. Move to the folder venv/Scripts: **> cd venv/Scripts**
+3. Now activate the virtual environment writing in the terminal "activate": **> activate**
+4. Go to project folder and install requirements by requirements.txt file: **> pip install -r requirements.txt** 
+
+
 NEL CASO IN CUI CI SIA L'ERRORE: AttributeError: module 'keras.utils.generic_utils' has no attribute 'populate_dict_with_module_objects'
 MODIFICARE IL FILE __ init __ .py PRESENTE NELLA CARTELLA: venv/Lib/keras/initializers E MODIFICARE LE RIGHE 24,25 CON:
 from tensorflow.python.keras.utils import generic_utils
