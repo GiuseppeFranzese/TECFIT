@@ -115,10 +115,12 @@ function setSuccessFor(input) {
 
 
 function loadDoc() {
-    const link = document.createElement('a');
-    link.href = url;
-    link.setAttribute('download', 'Scheda_TECFIT.pdf');
-    document.body.appendChild(link);
-    link.click();
+    if(nameValue !='' && cognomeValue!='' && etaValue!='' && pesoValue!='') {
+        const link = document.createElement('a');
+        link.href = url;
+        link.setAttribute('download', 'Scheda_TECFIT.pdf');
+        document.body.appendChild(link);
+        link.click();
+    }
 }
 
