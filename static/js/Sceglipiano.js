@@ -9,6 +9,7 @@ var nameValue = Nome.value.trim();
 var cognomeValue = Cognome.value.trim();
 var etaValue = Eta.value.trim();
 var pesoValue = Peso.value.trim();
+var url;
 
 form.addEventListener('submit', e => {
     e.preventDefault();
@@ -67,7 +68,6 @@ function checkInputs() {
     }
     console.log(cognomeValue + nameValue + etaValue + pesoValue + "ciao")
     if(nameValue !='' && cognomeValue!='' && etaValue!='' && pesoValue!='') {
-        console.log("ciaoo")
         $.ajax({
             type: "POST",
             url: "http://127.0.0.1:5000/ScegliPiano",
@@ -81,6 +81,14 @@ function checkInputs() {
                 Peso.disabled = true;
                 radio2.disabled = true;
                 radio1.disabled = true;
+                    axios({
+                url: 'http://localhost:5000/static/Scheda.pdf',
+                method: 'GET',
+                responseType: 'blob', // important
+            }).then((response) => {
+                 url = window.URL.createObjectURL(new Blob([response.data]));
+
+            });
                 document.getElementById("tec-buttonDownload").style.display = "block";
             },
             error: function () {
@@ -106,19 +114,10 @@ function setSuccessFor(input) {
 
 
 function loadDoc() {
-    if (nameValue !== '' && cognomeValue !== '' && etaValue !== '' && pesoValue !== '') {
-        axios({
-            url: 'http://localhost:5000/static/Scheda.pdf',
-            method: 'GET',
-            responseType: 'blob', // important
-        }).then((response) => {
-            const url = window.URL.createObjectURL(new Blob([response.data]));
-            const link = document.createElement('a');
-            link.href = url;
-            link.setAttribute('download', 'Scheda_TECFIT.pdf');
-            document.body.appendChild(link);
-            link.click();
-        });
-    }
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', 'Scheda_TECFIT.pdf');
+    document.body.appendChild(link);
+    link.click();
 }
 

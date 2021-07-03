@@ -8,10 +8,10 @@ from flask_ngrok import run_with_ngrok
 import nltk
 from keras.models import load_model
 from nltk.stem import WordNetLemmatizer
-from flask_cors import CORS, cross_origin
+from flask_cors import CORS
 import pdfkit
-lemmatizer = WordNetLemmatizer()
 
+lemmatizer = WordNetLemmatizer()
 
 # chat initialization
 model = load_model("chatbot_model.h5")
@@ -22,7 +22,7 @@ classes = pickle.load(open("classes.pkl", "rb"))
 app = Flask(__name__)
 CORS(app)
 cors = CORS(app, resources={
-    r"/*":{
+    r"/*": {
         "origins": "*"
     }
 })
@@ -38,29 +38,33 @@ def home():
 def Alimentazione():
     return render_template("Alimentazione.html")
 
+
 @app.route("/ScegliPiano/")
 def scegliPiano():
     return render_template("ScegliPiano.html")
+
 
 @app.route("/Esecuzione/")
 def Esecuzione():
     return render_template("Esecuzione.html")
 
 
-@app.route("/Alimentazione/Consigli",methods=["POST"])
+@app.route("/Alimentazione/Consigli", methods=["POST"])
 def inviaConsigli():
     nome = request.form["nome"]
-    with open("static/json/"+nome+".json") as file:
+    with open("static/json/" + nome + ".json") as file:
         data = json.load(file)
     return data
 
-@app.route("/Esecuzione/Esercizi",methods=["GET"])
+
+@app.route("/Esecuzione/Esercizi", methods=["GET"])
 def inviaEsercizi():
     with open("static/json/Esercizi.json") as file:
         data = json.load(file)
     return data
 
-@app.route("/ScegliPiano",methods=["POST"])
+
+@app.route("/ScegliPiano", methods=["POST"])
 def scegliPiano2():
     nome = request.form["nome"]
     cognome = request.form["cognome"]
@@ -93,11 +97,10 @@ def scegliPiano2():
     .num{
         font-size: 1.5rem;
     }
-    
+
     </style>
     </head>
     <body>
-
      <table>
         <tr>
           <td>
@@ -156,15 +159,16 @@ def scegliPiano2():
           <td class="testo num">3x8</td>
         </tr>
       </table>
-
     </body>
     </html>''')
     createPdf()
     return "create"
 
-@app.route("/static/Scheda.pdf",methods=["GET"])
+
+@app.route("/static/Scheda.pdf", methods=["GET"])
 def inviaScheda():
     return send_file("static/Scheda.pdf")
+
 
 @app.route("/", methods=["POST"])
 def chatbot_response():
@@ -173,12 +177,12 @@ def chatbot_response():
         name = msg[11:]
         ints = predict_class(msg, model)
         res1 = getResponse(ints, intents)
-        res =res1.replace("{n}",name)
+        res = res1.replace("{n}", name)
     elif msg.startswith('hi my name is'):
         name = msg[14:]
         ints = predict_class(msg, model)
         res1 = getResponse(ints, intents)
-        res =res1.replace("{n}",name)
+        res = res1.replace("{n}", name)
     else:
         ints = predict_class(msg, model)
         res = getResponse(ints, intents)
@@ -231,10 +235,10 @@ def getResponse(ints, intents_json):
             break
     return result
 
+
 def createPdf():
     pdfkit.from_file("templates/scheda.html", "static/Scheda.pdf")
 
 
 if __name__ == "__main__":
     app.run()
-
