@@ -86,8 +86,7 @@ MODIFY THE FILE __ init __ .py PRESENT IN THE FOLDER: venv/Lib/keras/initializer
 from tensorflow.python.keras.utils import generic_utils
 from tensorflow.python.keras.utils import tf_inspect as inspect
 
-Run the train.py file first to train the model. This will generate a file called chatbot_model.h5.
-After running train.py, run app.py to initialize and start the bot.
+Run  app.py with flask run
 
 <!-- LICENSE -->
 ## License
