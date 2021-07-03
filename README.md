@@ -9,7 +9,7 @@
 # TECFIT
 
   <p>
-    Progetto universitario
+    University project
     <br />
     <a href="https://github.com/GiuseppeFranzese/TECFIT"><strong>Explore the docs »</strong></a>
 </p>
@@ -33,7 +33,6 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#authors">Authors</a></li>
   </ol>
@@ -44,14 +43,14 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-TECFIT ha l'obiettivo di guidare utenti inesperti ad entrare nel mondo del fitness, con focus bodybuilding. L'utente può interagire con il sistema fornendo i propri parametri. Il sistema prevede consigli sugli esercizi da svolgere in palestra e consigli sull'alimentazione.
-E' possibile ricevere una scheda personalizzata in formato .pdf inserendo i propri dati e ricevere supporto con un chatBot.
+TECFIT is a web application and aims to guide inexperienced users to enter the world of fitness, with a focus on bodybuilding. The user can interact with the system by providing his own parameters. The system provides advice on exercises to be done in the gym and advice on nutrition.
+It is possible to receive a personalized card in .pdf format by entering your data and receive support with a chatBot.
 
 | :exclamation:  This project was made for learning purposes only |
 |-----------------------------------------------------------------|
 
 ### Built With
-Questo progetto è stato realizzato utilizzando vari linguaggi di programmazione, tecnologie, framework e librerie come:
+This project was built using various programming languages, technologies, frameworks and libraries such as:
 
 <ul>
 <li>HTML5</li>
@@ -71,7 +70,7 @@ Questo progetto è stato realizzato utilizzando vari linguaggi di programmazione
 
 Browser Web
 
-Pyhton per avviare un server locale
+Pyhton
 
 ### Installation
 
@@ -81,20 +80,14 @@ Pyhton per avviare un server locale
 4. Go to project folder and install requirements by requirements.txt file: **> pip install -r requirements.txt** 
 
 
-NEL CASO IN CUI CI SIA L'ERRORE: AttributeError: module 'keras.utils.generic_utils' has no attribute 'populate_dict_with_module_objects'
-MODIFICARE IL FILE __ init __ .py PRESENTE NELLA CARTELLA: venv/Lib/keras/initializers E MODIFICARE LE RIGHE 24,25 CON:
+
+IF THERE IS THE ERROR: AttributeError: module 'keras.utils.generic_utils' has no attribute 'populate_dict_with_module_objects'
+MODIFY THE FILE __ init __ .py PRESENT IN THE FOLDER: venv/Lib/keras/initializers AND EDIT THE LINES 24,25 WITH:
 from tensorflow.python.keras.utils import generic_utils
 from tensorflow.python.keras.utils import tf_inspect as inspect
 
-Eseguire prima il file train.py per addestrare il modello. Questo genererà un file chiamato chatbot_model.h5.
-Dopo aver eseguito train.py, esegui app.py per inizializzare e avviare il bot.
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com
-
+Run the train.py file first to train the model. This will generate a file called chatbot_model.h5.
+After running train.py, run app.py to initialize and start the bot.
 
 <!-- LICENSE -->
 ## License
