@@ -87,9 +87,10 @@ function checkInputs() {
                 responseType: 'blob', // important
             }).then((response) => {
                  url = window.URL.createObjectURL(new Blob([response.data]));
+                 document.getElementById("tec-buttonDownload").style.display = "block";
 
             });
-                document.getElementById("tec-buttonDownload").style.display = "block";
+
             },
             error: function () {
                 alert("Chiamata fallita, si prega di riprovare...");
