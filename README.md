@@ -82,7 +82,9 @@ Pyhton
 
 
 IF THERE IS THE ERROR: AttributeError: module 'keras.utils.generic_utils' has no attribute 'populate_dict_with_module_objects'
+
 MODIFY THE FILE __ init __ .py PRESENT IN THE FOLDER: venv/Lib/keras/initializers AND EDIT THE LINES 24,25 WITH:
+
 from tensorflow.python.keras.utils import generic_utils
 from tensorflow.python.keras.utils import tf_inspect as inspect
 
