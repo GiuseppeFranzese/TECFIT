@@ -86,6 +86,7 @@ IF THERE IS THE ERROR: AttributeError: module 'keras.utils.generic_utils' has no
 MODIFY THE FILE __ init __ .py PRESENT IN THE FOLDER: venv/Lib/keras/initializers AND EDIT THE LINES 24,25 WITH:
 
 from tensorflow.python.keras.utils import generic_utils
+
 from tensorflow.python.keras.utils import tf_inspect as inspect
 
 Run  app.py with flask run
